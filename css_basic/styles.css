@@ -13,7 +13,18 @@ article{
     flex: 2;
     overflow-y: auto;
 }
+
 aside{
     flex: 1;
     overflow-y: auto;
+}
+
+header, footer{
+    background-color: black;
+    color: aliceblue;
+}
+
+header a, footer a{
+    background-color: black;
+    color: aliceblue;
 }
