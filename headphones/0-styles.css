@@ -185,16 +185,26 @@ body {
     }
 }
 
-/* Mobile Navigation - matches reference design */
+/* Mobile Navigation - expandable menu that pushes content down */
 @media (max-width: 700px) {
     .navbar {
-        padding: 16px 0;
+        padding: 16px 0 0 0;
+        transition: padding 0.3s ease;
     }
 
     .nav-container {
         position: relative;
         justify-content: center;
         padding: 0 16px;
+        flex-direction: column;
+    }
+
+    .nav-container > div:first-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 16px;
     }
 
     .logo-icon {
@@ -211,38 +221,24 @@ body {
         transform: translateY(-50%);
     }
 
-    /* Hide navigation menu by default on mobile */
+    /* Navigation menu - hidden by default, expands when toggled */
     .nav-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(10px);
-        display: none;
+        max-height: 0;
+        overflow: hidden;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 40px;
-        z-index: 999;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
+        gap: 20px;
+        padding: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
     }
 
-    /* CORRECTED SELECTOR - Show menu when checkbox is checked */
-    .nav-toggle:checked ~ .hamburger + .logo + .nav-menu {
-        display: flex !important;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    /* Alternative approach - using general sibling selector */
+    /* Show menu when checkbox is checked - expands vertically */
     .nav-toggle:checked ~ .nav-menu {
-        display: flex !important;
-        opacity: 1;
-        visibility: visible;
+        max-height: 200px;
+        padding: 20px 0;
     }
 
     /* Hamburger animation when menu is open */
@@ -259,18 +255,26 @@ body {
     }
 
     .nav-menu a {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: normal;
         color: white;
         text-transform: lowercase;
-        padding: 10px 20px;
+        padding: 8px 20px;
         border-radius: 5px;
         transition: all 0.3s ease;
+        display: block;
+        text-align: center;
     }
 
     .nav-menu a:hover {
         color: #ff6565;
         background: rgba(255, 101, 101, 0.1);
+    }
+
+    /* Adjust navbar padding when menu is open */
+    .nav-toggle:checked ~ .navbar,
+    .nav-toggle:checked + .hamburger + .logo + .nav-menu + .navbar {
+        padding-bottom: 20px;
     }
 
     /* Enhanced hero section styling for mobile */
@@ -280,7 +284,8 @@ body {
 
     .hero-content {
         max-width: 92%;
-        padding: 80px 16px 40px;
+        padding: 40px 16px 40px;
+        transition: padding-top 0.3s ease;
     }
 
     .hero-title {
