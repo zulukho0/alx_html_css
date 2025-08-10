@@ -188,7 +188,7 @@ body {
 /* Mobile Navigation - expandable menu that pushes content down */
 @media (max-width: 700px) {
     .navbar {
-        padding: 16px 0 0 0;
+        padding: 16px 0;
         transition: padding 0.3s ease;
     }
 
@@ -197,14 +197,24 @@ body {
         justify-content: center;
         padding: 0 16px;
         flex-direction: column;
+        align-items: flex-start;
     }
 
-    .nav-container > div:first-child {
+    /* Top row with hamburger and logo */
+    .nav-container::before {
+        content: '';
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding-bottom: 16px;
+        height: 52px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 8px;
     }
 
     .logo-icon {
@@ -212,13 +222,13 @@ body {
         height: 36px;
     }
 
-    /* Hamburger positioned at top-left */
+    /* Hamburger positioned at top-left - STAYS IN SAME POSITION */
     .hamburger {
         display: block;
         position: absolute;
         left: 16px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 16px;
+        /* Fixed position - doesn't move when menu opens/closes */
     }
 
     /* Navigation menu - hidden by default, expands when toggled */
@@ -230,18 +240,19 @@ body {
         align-items: center;
         gap: 20px;
         padding: 0;
+        margin-top: 52px;
         transition: max-height 0.3s ease, padding 0.3s ease;
         background: rgba(0, 0, 0, 0.1);
         border-radius: 8px;
     }
 
-    /* Show menu when checkbox is checked - expands vertically */
+    /* CORRECTED SELECTOR - Show menu when checkbox is checked */
     .nav-toggle:checked ~ .nav-menu {
         max-height: 200px;
         padding: 20px 0;
     }
 
-    /* Hamburger animation when menu is open */
+    /* Hamburger animation when menu is open - X stays in same position */
     .nav-toggle:checked + .hamburger span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
@@ -269,12 +280,6 @@ body {
     .nav-menu a:hover {
         color: #ff6565;
         background: rgba(255, 101, 101, 0.1);
-    }
-
-    /* Adjust navbar padding when menu is open */
-    .nav-toggle:checked ~ .navbar,
-    .nav-toggle:checked + .hamburger + .logo + .nav-menu + .navbar {
-        padding-bottom: 20px;
     }
 
     /* Enhanced hero section styling for mobile */
