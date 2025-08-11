@@ -344,78 +344,42 @@ body {
 .contact-section .section-title {
     color: #333;
     margin-bottom: 60px;
-    font-size: 36px;
 }
 
 .contact-form {
-    max-width: 335px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
 .form-group {
-    margin-bottom: 45px;
-    position: relative;
+    margin-bottom: 30px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0;
-    border: none;
-    border-bottom: 1px solid #071629;
-    background: transparent;
-    font-size: 14px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
     font-family: inherit;
     outline: none;
     transition: border-color 0.3s ease;
-    color: #071629;
-    font-weight: 600;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #071629;
-    font-weight: 600;
-    opacity: 1;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-bottom-color: #ff6565;
-}
-
-.form-group input:focus::placeholder,
-.form-group textarea:focus::placeholder {
-    opacity: 0.7;
+    border-color: #ff6565;
 }
 
 .form-group textarea {
-    resize: none;
-    min-height: 40px;
-    padding-top: 10px;
-}
-
-/* Custom styling for form inputs */
-.form-group input[type="text"],
-.form-group input[type="email"] {
-    height: 40px;
-    line-height: 40px;
+    resize: vertical;
+    min-height: 120px;
 }
 
 .contact-form .cta-button {
     display: block;
-    margin: 55px auto 0;
-    padding: 13px 31px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 22px;
-    font-weight: bold;
-}
-
-.contact-form .cta-button:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
+    margin: 40px auto 0;
 }
 
 /* Responsive Design */
@@ -475,14 +439,6 @@ body {
 
     .contact-section {
         padding: 60px 0;
-    }
-
-    .contact-section .section-title {
-        font-size: 28px;
-    }
-
-    .contact-form {
-        max-width: 300px;
     }
 }
 
@@ -638,28 +594,5 @@ body {
     /* Smaller font icons on very small screens */
     .service-icon i {
         font-size: 50px;
-    }
-
-    .contact-section {
-        padding: 50px 0;
-    }
-
-    .contact-section .section-title {
-        font-size: 24px;
-        margin-bottom: 50px;
-    }
-
-    .contact-form {
-        max-width: 280px;
-    }
-
-    .form-group {
-        margin-bottom: 40px;
-    }
-
-    .contact-form .cta-button {
-        margin-top: 45px;
-        padding: 12px 28px;
-        font-size: 11px;
     }
 }
