@@ -335,16 +335,17 @@ body {
     opacity: 0.9;
 }
 
-/* Contact Section - RESTORED PROPER STYLING */
+/* Contact Section - FIXED STYLING */
 .contact-section {
     background-color: white;
-    padding: 100px 0;
+    padding: 110px 0;
 }
 
 .contact-section .section-title {
-    color: #333;
-    margin-bottom: 60px;
-    font-size: 36px;
+    color: #071629;
+    margin-bottom: 56px;
+    font-size: 32px;
+    font-weight: 600;
 }
 
 .contact-form {
@@ -353,14 +354,14 @@ body {
 }
 
 .form-group {
-    margin-bottom: 45px;
+    margin-bottom: 56px;
     position: relative;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0;
+    padding: 13px 0 8px 0;
     border: none;
     border-bottom: 1px solid #071629;
     background: transparent;
@@ -370,6 +371,7 @@ body {
     transition: border-color 0.3s ease;
     color: #071629;
     font-weight: 600;
+    line-height: 1;
 }
 
 .form-group input::placeholder,
@@ -377,6 +379,7 @@ body {
     color: #071629;
     font-weight: 600;
     opacity: 1;
+    font-size: 14px;
 }
 
 .form-group input:focus,
@@ -391,20 +394,20 @@ body {
 
 .form-group textarea {
     resize: none;
-    min-height: 40px;
-    padding-top: 10px;
+    min-height: 37px;
+    padding-top: 13px;
+    padding-bottom: 8px;
+    overflow: hidden;
 }
 
-/* Custom styling for form inputs */
-.form-group input[type="text"],
-.form-group input[type="email"] {
-    height: 40px;
-    line-height: 40px;
+/* Remove default textarea styling */
+.form-group textarea::-webkit-scrollbar {
+    display: none;
 }
 
 .contact-form .cta-button {
     display: block;
-    margin: 55px auto 0;
+    margin: 56px auto 0;
     padding: 13px 31px;
     font-size: 12px;
     text-transform: uppercase;
@@ -487,68 +490,73 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 36px;
+    font-size: 36px;
     }
 
     .hero-content {
-        padding: 50px 20px 30px;
+    padding: 50px 20px 30px;
     }
 
     .hero-description {
-        font-size: 14px;
+    font-size: 14px;
     }
 
     .section-title {
-        font-size: 28px;
+    font-size: 28px;
     }
 
     .services-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 30px;
     }
 
     .what-we-do-section {
-        padding: 60px 0;
+    padding: 60px 0;
     }
 
     .our-results-section {
-        padding: 60px 0;
+    padding: 60px 0;
     }
 
     .results-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
     }
 
     .result-icon {
-        width: 150px;
-        height: 150px;
+    width: 150px;
+    height: 150px;
     }
 
     .pentagon {
-        width: 150px;
-        height: 150px;
+    width: 150px;
+    height: 150px;
     }
 
     .result-number {
-        font-size: 36px;
+    font-size: 36px;
     }
 
     /* Responsive font icon size */
     .service-icon i {
-        font-size: 60px;
+    font-size: 60px;
     }
 
     .contact-section {
-        padding: 60px 0;
+    padding: 60px 0;
     }
 
     .contact-section .section-title {
-        font-size: 28px;
+    font-size: 28px;
+    margin-bottom: 50px;
     }
 
     .contact-form {
-        max-width: 300px;
+    max-width: 300px;
+    }
+
+    .form-group {
+    margin-bottom: 45px;
     }
 
     /* TABLET VIEW: Header logo stays the same, only footer logo changes */
@@ -556,264 +564,264 @@ body {
 
     /* Footer tablet styles - keep horizontal layout but switch to favicon */
     .footer {
-        padding: 60px 0 30px;
+    padding: 60px 0 30px;
     }
 
     .footer-content {
-        /* Keep flex-direction: row for tablet - logo left, social right */
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 40px;
+    /* Keep flex-direction: row for tablet - logo left, social right */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
     }
 
     .footer-logo {
-        width: 32px;
-        height: 32px;
+    width: 32px;
+    height: 32px;
     }
 
     .footer-logo img {
-        content: url('images/favicon.png');
+    content: url('images/favicon.png');
     }
 
     .social-media {
-        gap: 15px;
+    gap: 15px;
     }
 
     .social-link {
-        width: 35px;
-        height: 35px;
+    width: 35px;
+    height: 35px;
     }
 
     .social-link i {
-        font-size: 25px;
+    font-size: 25px;
     }
 }
 
 /* Mobile Navigation - expandable menu that pushes content down */
 @media (max-width: 700px) {
     .navbar {
-        padding: 16px 0;
-        transition: padding 0.3s ease;
+    padding: 16px 0;
+    transition: padding 0.3s ease;
     }
 
     .nav-container {
-        position: relative;
-        justify-content: center;
-        padding: 0 16px;
-        flex-direction: column;
-        align-items: flex-start;
+    position: relative;
+    justify-content: center;
+    padding: 0 16px;
+    flex-direction: column;
+    align-items: flex-start;
     }
 
     .logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 8px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
     }
 
     /* MOBILE: Header logo stays the same - REMOVED favicon change */
     .logo-icon {
-        width: 150px;
-        height: 36px;
+    width: 150px;
+    height: 36px;
     }
     /* NO content change - logo stays as logo_headphones.png */
 
     .hamburger {
-        display: block;
-        position: absolute;
-        left: 16px;
-        top: 16px;
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 16px;
     }
 
     .nav-menu {
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 0;
-        margin-top: 20px;
-        transition: max-height 0.3s ease, padding 0.3s ease;
-        background: rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    margin-top: 20px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     }
 
     .nav-toggle:checked~.nav-menu {
-        max-height: 180px;
-        padding: 15px 0;
+    max-height: 180px;
+    padding: 15px 0;
     }
 
     .nav-toggle:checked+.hamburger span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg);
     }
 
     .nav-toggle:checked+.hamburger span:nth-child(2) {
-        opacity: 0;
+    opacity: 0;
     }
 
     .nav-toggle:checked+.hamburger span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
     }
 
     .nav-menu a {
-        font-size: 16px;
-        font-weight: normal;
-        color: white;
-        text-transform: lowercase;
-        padding: 6px 20px;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-        display: block;
-        text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+    text-transform: lowercase;
+    padding: 6px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
     }
 
     .nav-menu a:hover {
-        color: #ff6565;
-        background: rgba(255, 101, 101, 0.1);
+    color: #ff6565;
+    background: rgba(255, 101, 101, 0.1);
     }
 
     .hero-section::before {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.5) 55%, rgba(5, 15, 25, 0.85) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.5) 55%, rgba(5, 15, 25, 0.85) 100%);
     }
 
     .hero-content {
-        max-width: 92%;
-        padding: 40px 16px 40px;
-        transition: padding-top 0.3s ease;
+    max-width: 92%;
+    padding: 40px 16px 40px;
+    transition: padding-top 0.3s ease;
     }
 
     .hero-title {
-        font-size: 36px;
-        line-height: 1.2;
+    font-size: 36px;
+    line-height: 1.2;
     }
 
     .hero-subtitle {
-        font-size: 14px;
-        opacity: 0.95;
+    font-size: 14px;
+    opacity: 0.95;
     }
 
     .cta-button {
-        padding: 14px 26px;
-        font-size: 13px;
-        border-radius: 24px;
-        margin-bottom: 40px;
+    padding: 14px 26px;
+    font-size: 13px;
+    border-radius: 24px;
+    margin-bottom: 40px;
     }
 
     .hero-description {
-        max-width: 90%;
-        font-size: 14px;
-        line-height: 1.9;
+    max-width: 90%;
+    font-size: 14px;
+    line-height: 1.9;
     }
 
     /* Mobile footer - stack vertically, footer logo uses favicon */
     .footer-content {
-        flex-direction: column;
-        gap: 30px;
-        margin-bottom: 30px;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
     }
 
     .footer-logo {
-        width: 32px;
-        height: 32px;
+    width: 32px;
+    height: 32px;
     }
 
     .footer-logo img {
-        content: url('images/favicon.png');
+    content: url('images/favicon.png');
     }
 }
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 28px;
+    font-size: 28px;
     }
 
     .cta-button {
-        padding: 12px 25px;
-        font-size: 12px;
+    padding: 12px 25px;
+    font-size: 12px;
     }
 
     .section-title {
-        font-size: 24px;
+    font-size: 24px;
     }
 
     .results-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 30px;
     }
 
     .result-icon {
-        width: 120px;
-        height: 120px;
+    width: 120px;
+    height: 120px;
     }
 
     .pentagon {
-        width: 120px;
-        height: 120px;
+    width: 120px;
+    height: 120px;
     }
 
     .result-number {
-        font-size: 28px;
+    font-size: 28px;
     }
 
     /* Smaller font icons on very small screens */
     .service-icon i {
-        font-size: 50px;
+    font-size: 50px;
     }
 
     .contact-section {
-        padding: 50px 0;
+    padding: 50px 0;
     }
 
     .contact-section .section-title {
-        font-size: 24px;
-        margin-bottom: 50px;
+    font-size: 24px;
+    margin-bottom: 50px;
     }
 
     .contact-form {
-        max-width: 280px;
+    max-width: 280px;
     }
 
     .form-group {
-        margin-bottom: 40px;
+    margin-bottom: 40px;
     }
 
     .contact-form .cta-button {
-        margin-top: 45px;
-        padding: 12px 28px;
-        font-size: 11px;
+    margin-top: 45px;
+    padding: 12px 28px;
+    font-size: 11px;
     }
 
     /* Footer mobile styles - keep favicon for footer only */
     .footer {
-        padding: 50px 0 25px;
+    padding: 50px 0 25px;
     }
 
     .footer-content {
-        gap: 30px;
-        margin-bottom: 30px;
+    gap: 30px;
+    margin-bottom: 30px;
     }
 
     .footer-logo {
-        width: 32px;
-        height: 32px;
+    width: 32px;
+    height: 32px;
     }
 
     .social-media {
-        gap: 12px;
+    gap: 12px;
     }
 
     .social-link {
-        width: 30px;
-        height: 30px;
+    width: 30px;
+    height: 30px;
     }
 
     .social-link i {
-        font-size: 22px;
+    font-size: 22px;
     }
 
     .footer-copyright p {
-        font-size: 11px;
+    font-size: 11px;
     }
 }
