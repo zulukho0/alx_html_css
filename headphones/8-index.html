@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="6-styles.css">
+    <link rel="stylesheet" href="8-styles.css">
     <link rel="stylesheet" href="assets/style.css">
     <title>Headphones</title>
 </head>
@@ -14,13 +14,12 @@
         <!-- Navigation -->
         <nav class="navbar">
             <div class="nav-container">
-                <!-- Mobile hamburger menu -->
-                <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-                <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+                <!-- Mobile hamburger menu - REMOVED checkbox, added JS functionality -->
+                <button class="hamburger" aria-label="Toggle navigation" id="hamburger-btn">
                     <span></span>
                     <span></span>
                     <span></span>
-                </label>
+                </button>
 
                 <!-- Logo -->
                 <div class="logo">
@@ -30,7 +29,7 @@
                 </div>
 
                 <!-- Navigation menu -->
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="nav-menu">
                     <li><a href="#what-we-do">what we do</a></li>
                     <li><a href="#our-results">our results</a></li>
                     <li><a href="#contact-us">contact us</a></li>
@@ -199,6 +198,8 @@
             </div>
         </div>
     </footer>
+
+<script src="8-script.js"></script>
 </body>
 
 </html>
